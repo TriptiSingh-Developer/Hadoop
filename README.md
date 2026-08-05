@@ -169,28 +169,6 @@ The report includes examples of:
 - CSV data processing
 - Regular-expression-based field extraction
 
-## Recommended Repository Structure
-
-```text
-hadoop-hive-crime-analysis/
-├── README.md
-├── data/
-│   ├── sample_crimes.csv
-│   └── data_dictionary.md
-├── hive/
-│   ├── 01_create_database.sql
-│   ├── 02_load_raw_data.sql
-│   ├── 03_create_tables.sql
-│   ├── 04_partitions_and_indexes.sql
-│   └── 05_analysis_queries.sql
-├── screenshots/
-├── reports/
-│   └── crime_data_analysis_report.pdf
-├── docker/
-│   └── README.md
-└── LICENSE
-```
-
 ## Data-Quality and Documentation Note
 
 The report contains two different date-range descriptions:
@@ -208,18 +186,6 @@ Before publishing the repository, verify the actual source dataset and document 
 - The PDF contains terminal screenshots rather than reusable `.sql` scripts.
 - Some query examples should be reviewed for naming consistency and semantic correctness.
 - The dataset source and license are not clearly documented in the report.
-
-## Recommended Modernization
-
-- Convert every Hive command into version-controlled `.sql` files
-- Use Hive's CSV SerDe instead of raw-line regex parsing
-- Add data validation for nulls, duplicate case numbers, and malformed rows
-- Document the dataset source and data dictionary
-- Add reproducible Docker or local-cluster instructions
-- Compare Hive execution with Spark SQL
-- Store curated data in Parquet
-- Add partition-pruning and file-format benchmarks
-- Create visual summaries in Power BI or Tableau
 
 ## Skills Demonstrated
 
